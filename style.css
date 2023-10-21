@@ -132,7 +132,36 @@ span{
 /* CONTENT (BOTTOM RIGHT) */
 
 .content {
+    display: grid;
     grid-column: 2 / 3;
     grid-row: 2 / 6;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: repeat(6, 1fr);
     background-color: rgb(205, 205, 205);
+}
+
+.projects {
+    grid-column: 1 / 2;
+    grid-row: 1 / 7;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 15px;
+}
+
+.projects .tile {
+    background-color: red;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.notifications {
+    grid-column: 2 / 3;
+    grid-row: 1 / 6;
+}
+
+/* COMBINATION */
+
+.projects,
+.notifications {
+    padding: 15px;
 }
