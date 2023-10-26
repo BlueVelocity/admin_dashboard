@@ -119,15 +119,28 @@ h2 {
 /* SIDEBAR (LEFT) */
 
 .sidebar {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 100px);
     grid-column: 1 / 2;
     grid-row: 1 / 6;
-    background-color: #1e40af;
+    background-color: #06b6d4;
+}
+
+.sidebar > * {
+    margin: 70px 15px;
 }
 
 .sidebar p {
+    font-size: 20px;
+    font-weight: bold;
     color: white;
+    margin: 30px 10px;
+}
+
+.logo p {
+    font-size: 30px;
+}
+
+.logo {
+    margin-top: 0px;
 }
 
 /* HEADER (TOP RIGHT) */
@@ -189,5 +202,5 @@ h2 {
 .notification-container .tile, 
 .projects .tile {
     border-radius: 15px;
-    background-color: red;
+    background-color: beige;
 }
