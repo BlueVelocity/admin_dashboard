@@ -172,7 +172,7 @@ h2 {
     box-shadow: 0px 5px 5px grey;
     z-index: 1;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 0.7fr;
     grid-template-rows: 1fr 1.4fr;
 }
 
@@ -181,18 +181,16 @@ h2 {
     justify-content: center;
     align-items: center;
     margin: 0px 30px;
-    background-color: red;
-    border: solid 1px black
 }
 
 .header form input {
-    height: 40px;
-    width: 90%;
+    height: 36px;
+    width: min(80%, 700px);
     margin-left: 10px;
     padding: 0px 20px;
     border: white 0px;
     border-radius: 20px;
-    background-color: beige;
+    background-color: lightgrey;
     font-size: 24px;
 }
 
@@ -201,16 +199,29 @@ h2 {
     width: 36px;
 }
 
-.header .profile {
-
+.header .user,
+.header form {
+    justify-content: start;
 }
 
-.header .user {
-    align-items: left;
+.header .profile {
+    justify-content: end;
 }
 
 .header .buttons {
     justify-content: space-evenly;
+}
+
+.header .buttons button {
+    background-color: var(--main-colour);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    width: min(120px, 30%);
+    height: 36px;
+    border-radius: 18px;
+    border: none;
+    box-shadow: 2px 2px 2px rgb(233, 233, 233);
 }
 
 /* CONTENT (BOTTOM RIGHT) */
@@ -276,4 +287,10 @@ h2 {
 img {
     width: 24px;
     height: 24px;
+}
+
+.header img:hover,
+.sidebar img:hover,
+button:hover {
+    cursor: pointer;
 }
