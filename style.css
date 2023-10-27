@@ -146,11 +146,6 @@ h2 {
     color: white;
 }
 
-.sidebar img {
-    width: 24px;
-    height: 24px;
-}
-
 .logo img {
     width: 48px;
     height: 48px;
@@ -176,6 +171,46 @@ h2 {
     background-color: whitesmoke;
     box-shadow: 0px 5px 5px grey;
     z-index: 1;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1.4fr;
+}
+
+.header > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 30px;
+    background-color: red;
+    border: solid 1px black
+}
+
+.header form input {
+    height: 40px;
+    width: 90%;
+    margin-left: 10px;
+    padding: 0px 20px;
+    border: white 0px;
+    border-radius: 20px;
+    background-color: beige;
+    font-size: 24px;
+}
+
+.header form img {
+    height: 36px;
+    width: 36px;
+}
+
+.header .profile {
+
+}
+
+.header .user {
+    align-items: left;
+}
+
+.header .buttons {
+    justify-content: space-evenly;
 }
 
 /* CONTENT (BOTTOM RIGHT) */
@@ -236,4 +271,9 @@ h2 {
 .projects .tile {
     border-radius: 5px;
     background-color: rgb(255, 255, 239);
+}
+
+img {
+    width: 24px;
+    height: 24px;
 }
