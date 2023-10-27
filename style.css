@@ -128,19 +128,39 @@ h2 {
     margin: 70px 15px;
 }
 
-.sidebar p {
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
+.sidebar > div > div {
+    display: flex;
+    align-items: center;
     margin: 30px 10px;
 }
 
+.sidebar p {
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.sidebar img {
+    width: 24px;
+    height: 24px;
+}
+
+.logo img {
+    width: 48px;
+    height: 48px;
+}
+
 .logo p {
-    font-size: 30px;
+    font-size: 26px;
 }
 
 .logo {
     margin-top: 0px;
+}
+
+.sidebar > div:not(:first-child) {
+    margin-left: 26px;
 }
 
 /* HEADER (TOP RIGHT) */
