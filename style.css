@@ -83,6 +83,11 @@ table {
 
 /* PAGE STYLING */
 
+:root {
+    --main-colour: #155e75;
+    --secondary-colour: #f59e0b;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -96,8 +101,8 @@ html {
 body {
     display: grid;
     grid-template-columns: 300px 4fr;
-    grid-template-rows: 150px repeat(4, 1fr);
-    width: min(100vw, 1400px);
+    grid-template-rows: 180px repeat(4, 1fr);
+    width: 100vw;
     height: 100%;
     min-height: 100vh;
 }
@@ -121,7 +126,7 @@ h2 {
 .sidebar {
     grid-column: 1 / 2;
     grid-row: 1 / 6;
-    background-color: #06b6d4;
+    background-color: var(--main-colour);
 }
 
 .sidebar > * {
@@ -168,7 +173,7 @@ h2 {
 .header {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
-    background-color: rgb(235, 235, 235);
+    background-color: whitesmoke;
     box-shadow: 0px 5px 5px grey;
     z-index: 1;
 }
@@ -180,28 +185,36 @@ h2 {
     grid-column: 2 / 3;
     grid-row: 2 / 6;
     grid-template-columns: 3fr 1fr;
-    background-color: rgb(205, 205, 205);
+    background-color: rgb(233, 233, 233);
 }
 
 .projects-container {
     grid-column: 1 / 2;   
     display: flex;
     flex-direction: column; 
-    padding: 15px;
+    padding: 30px 15px 30px 30px;
 }
 
 .projects {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    grid-auto-rows: 220px;
-    gap: 20px;
+    grid-auto-rows: 250px;
+    gap: 30px;
+}
+
+.projects .tile {
+    border-left: 10px solid var(--secondary-colour);
+}
+
+.tile {
+    box-shadow: 4px 4px 4px grey;
 }
 
 .notification-container {
     grid-column: 2 / 3;
     display: flex;
     flex-direction: column;
-    padding: 15px;
+    padding: 30px 30px 30px 15px;
     min-width: 300px;
 }
 
@@ -221,6 +234,6 @@ h2 {
 
 .notification-container .tile, 
 .projects .tile {
-    border-radius: 15px;
-    background-color: beige;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 239);
 }
